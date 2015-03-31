@@ -11,20 +11,25 @@ It includes:
 - Sip and new pjsip channel enabled
 - Only g729 english sounds and MOH
 
-To download it:
+To pull it:
 
 `# docker pull gonzalomarcote/docker-cert-asterisk13-centos7`
 
-To download the "Dockerfile" from git:
+If you pull it from Dcoker it will be compiled within the "Automated Build Repository" and for 64bits platform. In this case your platform could differ too much from the one it was compiled and arise some "cross platform" errors when you try to start asterisk image (for ex: asterisk Illegal instruction core dumped).
+If this is the case, it will be better to download it from git and compile it on your own platform/server from the Dockerfile:
 
 `$ git clone https://github.com/gonzalomarcote/docker-cert-asterisk13-centos7 docker-cert-asterisk13-centos7`
 
+`$ docker build -t="myrepository/asterisk01" .`
 
 To execute it:
 
 Asterisk PBX needs to use a big range of ports, so it needs to be executed with docker version 1.5.0 or higher (available in docker ubuntu sources) for being able to launch the image specifying a range of ports. For example:
 
 `# docker run --restart=always --name asterisk01 -d -p 5060-5065:5060-5065/tcp -p 10000-10500:10000-10500/udp gonzalomarcote/docker-cert-asterisk13-centos7`
+
+and connect to asterisk CLI with:
+`# docker exec -t -i asterisk01 /usr/sbin/rasterisk -vvvvv`
 
 Notice:
 
