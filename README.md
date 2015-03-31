@@ -20,6 +20,8 @@ If this is the case, it will be better to download it from git and compile it on
 
 `$ git clone https://github.com/gonzalomarcote/docker-cert-asterisk13-centos7 docker-cert-asterisk13-centos7`
 
+`$ cd docker-cert-asterisk13-centos7`
+
 `$ docker build -t="myrepository/asterisk01" .`
 
 To execute it:
@@ -29,6 +31,7 @@ Asterisk PBX needs to use a big range of ports, so it needs to be executed with 
 `# docker run --restart=always --name asterisk01 -d -p 5060-5065:5060-5065/tcp -p 10000-10500:10000-10500/udp gonzalomarcote/docker-cert-asterisk13-centos7`
 
 and connect to asterisk CLI with:
+
 `# docker exec -t -i asterisk01 /usr/sbin/rasterisk -vvvvv`
 
 Notice:
