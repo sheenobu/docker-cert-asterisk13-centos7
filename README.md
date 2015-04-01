@@ -3,7 +3,7 @@ Author: Gonzalo Marcote - gonzalomarcote@gmail.com
 
 ##### Docker image with Certified Asterisk 13 LTS version on Centos7 64bits
 
-This is the Certified Asterisk 13.1-cert1 version on Centos7 X86_64 with SIP and new PJSIP channels. Certified Asterisk 13 is the latest LTS version recommended for production systems with a release frequency of 2 - 4 times per year.
+This is the Docker Certified Asterisk 13.1-cert1 version on Centos7 X86_64 with SIP and new PJSIP channels. Certified Asterisk 13 is the latest LTS version recommended for production systems with a release frequency of 2 - 4 times per year.
 
 It includes:
 
