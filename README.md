@@ -15,7 +15,7 @@ To pull it:
 
 `# docker pull gonzalomarcote/docker-cert-asterisk13-centos7`
 
-If you pull it from Dcoker it will be compiled within the "Automated Build Repository" and for 64bits platform. In this case your platform could differ too much from the one it was compiled and arise some "cross platform" errors when you try to start asterisk image (for ex: asterisk Illegal instruction core dumped).
+If you pull it from Docker it will be compiled within the "Automated Build Repository" and for 64bits platform. In this case your platform could differ too much from the one it was compiled and arise some "cross platform" errors when you try to start asterisk image (for ex: asterisk Illegal instruction core dumped).
 If this is the case, it will be better to download it from git and compile it on your own platform/server from the Dockerfile:
 
 `$ git clone https://github.com/gonzalomarcote/docker-cert-asterisk13-centos7 docker-cert-asterisk13-centos7`
