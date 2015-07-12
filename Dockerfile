@@ -3,7 +3,7 @@ FROM centos:latest
 MAINTAINER Gonzalo Marcote "gonzalomarcote@gmail.com"
 RUN yum -y update
 RUN yum -y install vim tar htop
-RUN yum -y install gcc gcc-c++ make wget subversion libxml2-devel ncurses-devel openssl-devel sqlite-devel libuuid-devel vim-enhanced jansson-devel unixODBC unixODBC-devel libtool-ltdl libtool-ltdl-devel subversion speex-devel
+RUN yum -y install gcc gcc-c++ make wget subversion libxml2-devel ncurses-devel openssl-devel sqlite-devel libuuid-devel vim-enhanced jansson-devel unixODBC unixODBC-devel libtool-ltdl libtool-ltdl-devel subversion speex-devel mysql-devel
 WORKDIR /usr/src
 RUN svn co http://svn.pjsip.org/repos/pjproject/trunk/ pjproject-trunk
 WORKDIR /usr/src/pjproject-trunk
