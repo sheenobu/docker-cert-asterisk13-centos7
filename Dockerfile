@@ -17,7 +17,7 @@ WORKDIR /usr/src
 RUN wget http://downloads.asterisk.org/pub/telephony/certified-asterisk/certified-asterisk-13.1-current.tar.gz
 RUN tar -zxvf certified-asterisk-13.1-current.tar.gz
 WORKDIR /usr/src/certified-asterisk-13.1-cert1
-RUN sh contrib/scripts/get_mp3_source.sh
+#RUN sh contrib/scripts/get_mp3_source.sh
 COPY menuselect.makeopts /usr/src/certified-asterisk-13.1-cert1/menuselect.makeopts
 RUN ./configure CFLAGS='-g -O2 -mtune=native' --libdir=/usr/lib64
 RUN make
